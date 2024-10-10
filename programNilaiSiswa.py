@@ -8,7 +8,7 @@ print(line)
 print(title)
 print(line)
 
-#==================INPUT NILAI====================
+#================== INPUT NILAI =====================
 nim = input("Masukkan NIM : ")
 nama = input("Masukkan Nama : ")
 nilaiAbsen = int(input("Masukkan Nilai Absen : "))
@@ -16,7 +16,7 @@ nilaiTugas = int(input("Masukkan Nilai Tugas : "))
 nilaiUTS = int(input("Masukkan Nilai UTS : "))
 nilaiUAS = int(input("Masukkan Nilai UAS : "))
 
-#===============OUTPUT===================
+#================== OUTPUT ==========================
 print(line)
 print(title2)
 print(line)
@@ -40,9 +40,9 @@ elif hasilNilai == 75 or hasilNilai >= 60:
 elif hasilNilai == 59 or hasilNilai >= 46:
     print("Grade Anda : D")
 elif hasilNilai == 45 or hasilNilai >= 0:
-        print("Grade Anda : E")
+    print("Grade Anda : E")
 else:
-        print("nilai diluar nalar")
+    print("nilai diluar nalar")
 
 #HITUNG KETERANGAN LULUS ATAU GAGAL
 if hasilNilai > 50:
