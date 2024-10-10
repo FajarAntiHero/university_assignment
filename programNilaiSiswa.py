@@ -52,5 +52,6 @@ else:
 
 print(line)
 print("{:^30}".format("terimakasih".upper()))
+print(line)
 
 #Code Made By Fajar Maulana
