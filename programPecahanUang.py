@@ -80,6 +80,8 @@ while True:
     elif pecahan == "1000":
         hasil = seribu(jumlahUang)
         jumlahUang = int(hasil)
+    else:
+        print("NOMINAL TIDAK TERSEDIA!")
 
     print(f"Sisa uang anda setelah dipecah adalah {jumlahUang} \n")
     hasilUang = jumlahUang
@@ -92,4 +94,3 @@ while True:
         print("Anda tidak Memiliki sisa Uang untuk dipecah lagi \n")
         print(f"\n THANK YOU \n")
         break
-        
