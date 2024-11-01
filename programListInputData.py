@@ -1,6 +1,6 @@
 #ASSETS
 line = "="*50
-title = "{:^50}".format("data nilai dasar pemrograman 17.1b.24".upper())
+title = "{:^50}".format("data nilai dasar pemrograman 17.1B.24".upper())
 
 #DASHBOARD
 print(line)
