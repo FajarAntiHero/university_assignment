@@ -63,15 +63,17 @@ def countOut() -> str:
     mainTitle("menghitung pengeluaran")
     line.duaGaris(100)
     print("")
-    saldo = saldoAwal()
 
+    saldo = saldoAwal()
     dataNilaiPengeluaran = []
     dataNamaPengeluaran = []
+    saldoTotal = 0 
 
     while True:
-        try: 
+        try:
+            line.satuGaris(100)
             NamaPengeluaran = str(input("Nama Pengeluaran : "))
-            nilaiPengeluarn = int(input("Masukkan nominal pengeluaran :"))
+            nilaiPengeluarn = int(input("Masukkan nominal pengeluaran [Rp.] : "))
             dataNamaPengeluaran.append(NamaPengeluaran)
             dataNilaiPengeluaran.append(nilaiPengeluarn)
             line.satuGaris(100)
@@ -87,13 +89,15 @@ def countOut() -> str:
     tableTitle("no", "nama pengeluaran", "nilai pengeluaran")
     line.duaGaris(100)
     for i in range(len(dataNilaiPengeluaran)):
-        print("||{:^4}||{:^40}||{:^50}||".format(i+1, dataNamaPengeluaran[i], dataNilaiPengeluaran[i] ))
+        print("||{:^4}||{:^40}||Rp. {:^46}||".format(i+1, dataNamaPengeluaran[i], dataNilaiPengeluaran[i] ))
     line.satuGaris(100)
-    print(f"Saldo awal anda : {saldo}")
-    for i in range(len(dataNilaiPengeluaran)):
-        saldoAkhir = saldo - dataNilaiPengeluaran[i]
-        
-    print(f"Saldo Tersisa : {saldoAkhir}")
+
+    for i in dataNilaiPengeluaran:
+        saldoTotal += i
+
+    print(f"Saldo awal anda : Rp. {saldo}")
+    print(f"Total Pengeluaran : Rp. {saldoTotal}")
+    print(f"Saldo Tersisa : Rp. {saldo - saldoTotal}")
 
     line.duaGaris(100)
 
